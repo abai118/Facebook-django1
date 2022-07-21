@@ -20,3 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('facebookapp.urls')),
 ]
+
+
+handler404 = 'facebookapp.views.notfound'

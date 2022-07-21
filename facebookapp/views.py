@@ -171,40 +171,9 @@ def follow(request):
 
         return redirect("friends")
 
-# def comments(request,id):
-#     print(request.method,id)
-#     if request.method == 'POST':
-#         postid = id
-#         post = Post.objects.get(id= postid)
-#         posts = Post.objects.filter(id=postid)
-#         # print(posts)
-#         comments = comment.objects.filter(post=id).order_by('-time')
-
-#         # print(comments)
-#         return render(request, 'comments.html',{'posts':post,'comments':comments})
-
-
-# def postComment(request):
-#     if request.method == "POST":
-#         comments=request.POST.get('comment')
-
-#         postid =request.POST.get('postid')
-#         # print(postid)
-#         post= Post.objects.get(id=postid)
-
-
-#         comments=comment.objects.create(comment1= comments, user=request.user, post=post)
-#         # if parentid=="":
-#             # comments=comment.objects.create(comment= comments, user=request.user, post=post
-#         # else:
-#         #     parent= comment.objects.get(id=parent)
-#         #     comments=comment.objects.create(comment= comment, user=user, post=post , parent=parent)
-
-#         return redirect('/')
-
 
 def notfound(request,exception):
-    return render(request, 'error.html') 
+    return render(request, 'error.html')
 
 
 

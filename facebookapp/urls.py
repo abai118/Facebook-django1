@@ -5,6 +5,7 @@ from facebookapp import views
 
 
 
+
 urlpatterns = [
     path('',views.index,name='index'),
     path('login',views.login1,name='login'),
@@ -25,5 +26,5 @@ urlpatterns = [
 urlpatterns = urlpatterns + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 
 
-# handler404 = 'facebookapp.views.notfound'
+handler404 = 'facebookapp.views.notfound'
 
