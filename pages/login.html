@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>facebook</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='../static/styles/login.css'>
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Facebook_f_logo_%282021%29.svg/150px-Facebook_f_logo_%282021%29.svg.png" type="image/x-icon">
+
+</head>
+
+
+<body>
+
+
+    <div class="maincontainer">
+        <div class="facebooktext">
+
+            <img src="../static/img/logo-fb.png" />
+            <p class="fbtext">Facebook helps you connect and share with the people in your life.</p>
+        </div>
+        <div class="login-container">
+            <form action="login" method="post">
+                {% csrf_token %}
+                <input type="text" name="username" placeholder="enter your email"><br>
+                <input type="password" name="password" placeholder="password"><br>
+                <button type="submit"><b>Login</b></button>
+            </form>
+            <a href="https://www.facebook.com/login/identify/?ctx=recover&ars=facebook_login&from_login_screen=0">forgot
+                passward</a>
+            <hr>
+            <a href="register"> <button class="create"><b>Create new account</b></button></a>
+        </div>
+
+    </div>
+    {% for message in messages %}
+    <h1 class="error-message">{{message}}</h1>
+    {% endfor %}
+   
+</body>
+
+</html>

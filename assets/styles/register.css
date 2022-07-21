@@ -1,0 +1,177 @@
+body {
+    
+
+  margin: 0;
+  font-family: 'Lucida Grande', tahoma,verdana,arial,sans-serif;
+  line-height: 1.28;
+  background-color: #edf0f5;
+  padding-bottom: 5%;
+}
+.bottom-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding:20px ;
+}
+.rightbod {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid  #bdc7d8;
+  width :30%;
+  margin: auto;
+  border-radius: 20px;
+  padding-top:  2%;
+  padding-bottom:  5%;
+  background-color: white;
+
+}
+
+.main-heading {
+font-size: 80px;  
+color: blue;
+text-align: center;
+}
+
+.heading {
+   color: black;
+   font-size: 30px;
+   
+}
+.main-para {
+  color:#333;
+}
+hr {
+  border: 1px solid  #bdc7d8;
+  width:100%;
+  margin-bottom: 5%;
+}
+h1 {
+  font-family: tahoma,verdana,arial,sans-serif;
+  font-size: 38px;
+  color:#333;
+
+}
+
+
+.date-span {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:center;
+
+}
+
+
+.signup {
+  font-size:36px;
+  font-weight:700;
+  margin-bottom:5px;
+}
+
+.input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    
+}
+
+.inputbody1 {
+ 
+  font-size: 18px;
+  padding: 8px 10px;
+  border: 1px solid #bdc7d8;
+  color:#333;
+  margin-bottom:10px;
+  width: 40%;
+}
+.inputbody2 {
+  
+  font-size: 20px;
+  padding: 8px 10px;
+  border: 1px solid #bdc7d8;
+  color:#333;
+  margin-bottom:10px;
+  width: 100%;
+  
+}
+
+
+.date-heading {
+    font-size: 15px;
+    color: #333;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: left;
+}
+
+
+
+.selectbody {
+  display: inline-block;
+  height:30px;
+  font-size: 13px;
+  border: 1px solid #bdc7d8;
+  width: 30%;
+  color:#141823;
+ 
+}
+
+
+.gender {
+  font-size: 18px;
+  color: #141823;
+  cursor: pointer;
+  padding: 0 10px 0 3px;
+  margin-right: 4px;
+  line-height: 18px;
+  vertical-align: middle;
+}
+
+.spanpad {
+  padding: 5px 0 5px 4px;
+  display: inline-block;
+}
+
+.agree {
+  font-size: 11px;
+  color: #777;
+  width:316px;
+  margin: 11px 0 11px ;
+}
+
+a {
+  cursor: pointer;
+  margin: auto;
+}
+
+.signbut {
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color:#fff;
+  min-width: 194px;
+  padding: 7px 20px;
+  text-align: center;
+  margin: auto;
+  background: linear-gradient(#67ae55, #578843);
+
+  border: 1px solid;
+border-color: #3b6e22 #3b6e22 #2c5115;
+  margin-top: 10px;
+margin-bottom: 10px;
+  text-shadow: 0 1px 2px rgba(0,0,0,.5);
+  cursor:pointer;
+}
+.bottom-ele {
+  color: blue;
+  margin-top: 20px;
+}
+.error-message {
+  color: red;
+  font-size: 20px;
+}
