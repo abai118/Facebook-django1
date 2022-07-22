@@ -107,9 +107,9 @@ def friends(request):
     if request.user.is_authenticated:
         profile = Profilemodel.objects.get(user=request.user)
         friends = profile.followers.all()
-        all=Profilemodel.objects.all()
-        # print(friends,"ok")
-        # print(all)
+        all = Profilemodel.objects.all().exclude(user__in=friends).exclude(user=request.user)
+        
+        
         return render(request, 'friends.html',{'friends' : friends, 'all':all})
     else :
         return redirect('login')
@@ -146,9 +146,15 @@ def search(request):
         search = request.GET['search1']
 
 
-        user = Profilemodel.objects.filter(user__username__icontains=search)
+        # user = Profilemodel.objects.filter(user__username__icontains=search)
+        user1 = Profilemodel.objects.get(user=request.user).followers.all()
+        friends = Profilemodel.objects.filter(user__username__icontains=search).filter(user__in=user1)
+        user2 = Profilemodel.objects.filter(user__username__icontains=search).exclude(user__in=user1).exclude(user=request.user)
 
-        return render(request,'search.html',{'all':user})
+        
+        # print(user2)
+        
+        return render(request,'search.html',{'all':user2,'friends':friends})
     else :
         return redirect('/')
 
