@@ -23,7 +23,7 @@ urlpatterns = [
     path('comments/postComment',views.postComment,name='postComment'),
 ]
 
-urlpatterns = urlpatterns + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+urlpatterns = urlpatterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
 handler404 = 'facebookapp.views.notfound'
