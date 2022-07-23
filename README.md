@@ -15,6 +15,7 @@ User Stories, User Persona and Database Schema Design are given below
 
 As a user Facebook clone app have following features:
 - As a logged in user, i should be able to create a post.
+- As a logged in user, i should be able to delete a post.
 - As a logged in user, i should be able to like a post.
 - As a logged in user, i should be able to create a comment on a post.
 - As a logged in user, i should be able to edit my profile.
@@ -24,6 +25,7 @@ As a user Facebook clone app have following features:
 - As a logged in user, i should be able to see my friends.
 - As a logged in user, i should be able to edit my friend requests.
 - As a logged in user, i should be able to search for friends.
+- As a logged in user, i should be able to Delete my account.
 
 ### 2. Database Schema Design
 

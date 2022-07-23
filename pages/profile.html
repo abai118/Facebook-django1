@@ -103,13 +103,13 @@
 
       </div>
       <div class="sidebarRow">
-       <a style="text-decorator:None;" href="updateProfile"> <span class="material-icons"> Update Profile </span>
+       <a style="text-decoration: none;" href="updateProfile"> <span class="material-icons"> Update Profile </span>
        </a>
       </div>
       <form action="deleteAccount/{{user.id}}" method="post">
         {% csrf_token %}
       <div class="sidebarRow">
-       <button style="border: None; padding:None;" type="submit"> <span class="material-icons"> delete account </span>
+       <button style="border: None; padding:None; background-color:transparent;" type="submit"> <span class="material-icons"> delete account </span>
        </button>
       </div>
     </form>
