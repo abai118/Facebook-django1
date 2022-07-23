@@ -78,10 +78,17 @@ def logout(request):
 def updateProfile(request):
     if request.user.is_authenticated:
         if request.method == 'POST':
-            bio = request.POST['bio']
-            profilepic = request.FILES['profilepic']
-            nickname = request.POST['nickname']
-            profiles = Profilemodel.objects.create(user=request.user,image=profilepic,bio=bio,nickname=nickname)
+            if Profilemodel.objects.filter(user = request.user).exists():
+                bio = request.POST['bio']
+                profilepic = request.FILES['profilepic']
+                nickname = request.POST['nickname']
+                profiles = Profilemodel.objects.filter(user = request.user).update(image=profilepic,bio=bio,nickname=nickname)
+            else :
+                
+                bio = request.POST['bio']
+                profilepic = request.FILES['profilepic']
+                nickname = request.POST['nickname']
+                profiles = Profilemodel.objects.create(user=request.user,image=profilepic,bio=bio,nickname=nickname)
             return redirect('profile')
         else:
             return render(request,'profileUpload.html')
