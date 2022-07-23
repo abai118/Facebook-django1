@@ -21,6 +21,8 @@ urlpatterns = [
     path('follow',views.follow,name='follow'),
     path('comments/<int:id>',views.comments,name='comments'),
     path('comments/postComment',views.postComment,name='postComment'),
+    path('deletePost/<int:id>',views.deletePost,name='deletePost'),
+    path('deleteAccount/<int:id>',views.deleteAccount,name='deleteAccount'),
 ]
 
 urlpatterns = urlpatterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

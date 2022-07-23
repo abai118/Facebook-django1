@@ -223,3 +223,24 @@ def postComment(request):
             comments=comment.objects.create(comment1= comment1, user=user, post=post , parent=parent)
 
             return redirect('/')
+
+def deletePost(request,id):
+    
+    
+    if request.method == 'POST':
+        postid = id
+        post = Post.objects.get(id=postid)
+        post.delete()
+        print(post)
+    
+        return redirect('profile')
+
+
+def deleteAccount(request,id):
+    if request.method == 'POST':
+        userid = id
+        user = User.objects.get(id=userid)
+        user.delete()
+        
+    
+        return redirect('login')
